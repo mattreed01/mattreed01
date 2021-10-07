@@ -1,0 +1,29 @@
+{
+  "name": "Assignment8",
+  "version": "1.0.1",
+  "description": "IMY220_ Assignment_8",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "prop-types": "^15.7.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "webpack": "^5.1.0",
+    "webpack-cli": "^4.0.0"
+  },
+  "scripts": {
+    "build": "webpack && babel server.js -d dist",
+    "start": "npm run build && node dist/server.js"
+  },
+  "keywords": [
+    "js",
+    "react"
+  ],
+  "author": "Matthew Reed 19100133",
+  "license": "ISC"
+}
