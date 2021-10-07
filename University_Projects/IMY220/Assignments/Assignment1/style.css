@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Roboto&display=swap');
+
+.card-title
+{
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-body
+{
+    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+i{
+    margin-left: 0.5em;
+}
+
+@media only screen and (min-width: 996px)
+{
+    i{
+        transition: margin-left .5s, 
+                    transform .5s;
+    }
+
+    button:hover > i
+    {
+        transform: rotate(90deg);
+        margin-left: 1.5em;
+    }
+}
+
+/*i{
+    transition: trasform .5s;
+}
+
+i:hover{
+    transform: rotate(90deg);
+}*/
