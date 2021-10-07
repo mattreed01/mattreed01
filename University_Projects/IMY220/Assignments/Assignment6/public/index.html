@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <!-- Replace Name Surname with your name and surname -->
+        <meta name="author" content="Matthew Reed" />
+        <title>IMY 220 - A6</title> 
+        <!--<link href="style.css" rel="stylesheet" type="text/css"/>-->
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+              integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+              integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row mt-2">
+                <div class="col-12">
+                    <h1>Assignment 6</h1>
+                </div>
+            </div>
+            
+            <div class="row mt-2">
+                <div class="col-12">
+                    <form>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="name">Name:</label>
+                                    <input type="text" name="Name" id="name" class="form-control" placeholder="John Doe"/>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="msg">Message:</label>
+                                    <input type="text" name="message" id="msg" class="form-control" placeholder="Hello World!"/>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-1">
+                                <div class="form-group">
+                                    <button id="submitBtn" class="form-control btn-dark">Send</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" 
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        
+        <script src="/socket.io/socket.io.js"></script>
+        
+        <script type="text/javascript"> 
+            $(() => {
+                const socket = io();
+                
+                $('button#submitBtn').on('click', () => {
+                    console.log("click");
+                    
+                    let name = $('input#name').val();
+                    let message = $('input#msg').val();
+                
+                    let json = {
+                        "name" : name,
+                        "message" : message
+                    }; 
+            
+                    socket.emit('data', JSON.stringify(json));
+                });
+            });
+        </script>  
+    </body>
+</html>
