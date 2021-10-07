@@ -1,0 +1,629 @@
+@font-face
+{
+    font-family: 'title';
+    src: url('title.ttf');
+}
+
+@font-face
+{
+    font-family: 'body';
+    src: url('windows.ttf');
+}
+
+/*@keyframes moveHead
+{
+    from {background-position: 0px 0px;}
+    to {background-position: 10000px 0px;}
+}
+
+@keyframes moveFoot
+{
+    from {background-position: 0px 90px;}
+    to {background-position: 10000px 90px;}
+}
+
+@keyFrames lightShow
+{
+    0% {transform: skew(-18deg);}
+    25% {transform: skew(-12deg);}
+    50% {transform: skew(-6deg);}
+    75% {transform: skew(-12deg);}
+    100% {transform: skew(-18deg);}
+}*/
+
+/*Animations*/
+@keyFrames bringHeadUp
+{
+    from {height: 50%; background-position: 0px 52.5%;}
+    to {height: 0px; background-position: 0px -90px;}
+}
+
+@keyFrames bringHeadDown
+{
+    from {height: 0px; background-position: 0px 0px;}
+    to {height: 50%; background-position: 0px 52.5%;}
+}
+
+@keyFrames bringFootDown
+{
+    from {height: 50%; background-position: 0px 52.5%;}
+    to {height: 0px; background-position: 0px 112.5%;}
+}
+
+@keyFrames bringFootUp
+{
+    from {height: 0px; background-position: 0px 112.5%;}
+    to {height: 50%; background-position: 0px 52.5%;}
+}
+/*Animations*/
+
+@keyFrames Opaque
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyFrames fadeOut
+{
+    from {opacity: 1;}
+    to {opacity: 0.3;}
+}
+
+
+footer.introActive
+{
+    height: 50%;
+    background-position: 12% 52.5%;
+    background-repeat: repeat-x;
+    animation: bringFootDown 5s ease-in-out infinite; 
+}
+
+header.introActive
+{
+    height: 50%;
+    background-position: 12% 52.5%;
+    animation: bringHeadUp 5s ease-in-out infinite;
+}
+
+.introActive > .billboard
+{
+    /*opacity: 0;*/
+    animation: Opaque 6s ease-in-out infinite;
+}
+
+.introActive > h1
+{
+    opacity: 0;
+    animation: Opaque 3s 3s ease-in-out infinite;
+}
+
+h1:hover
+{
+  cursor: default;  
+}
+
+div#left.transition > *
+{
+    animation: fadeOut 6s ease-in-out infinite;
+}
+
+header.transition
+{
+    animation: bringHeadDown 5s ease-in-out infinite;
+    height: 50%;
+    background-position: 12% 52.5%;
+}
+
+footer.transition
+{
+    background-repeat: repeat-x;
+    animation: bringFootUp 5s ease-in-out infinite;
+    height: 50%;
+    background-position: 12% 52.5%;
+}
+
+
+
+body{
+    font-family: body, sans-serif; 
+}
+
+h1, p.show
+{
+    font-family: title, sans-serif;
+    font-size: 64px;
+    color: yellow;
+    margin-left: 28%;
+    /*text-shadow: 5px 5px red;*/
+}
+
+p.show
+{
+    margin-left: 0%;
+    text-align: center;
+    text-shadow: none;
+}
+
+.billboard:hover
+{
+  cursor: default;  
+}
+
+#btnToVideo
+{
+    text-decoration: none;
+    color: #fe019a;
+}
+
+/*a:visited
+{
+    text-decoration: none;
+    color: #fe019a
+}*/
+
+#btnToVideo:hover
+{
+    text-decoration: none;
+    color: /*violet*/ lightblue;
+    text-shadow: -5px 5px /*lightblue*/ violet;
+    cursor: pointer;
+}
+
+#lightshow
+{
+    position: absolute;
+    top: 40%;
+    left: 36.75%;
+
+    transform: skew(-15deg);
+    transform: rotate(-8deg);
+    
+    opacity: 0.4;
+    
+    /*animation: lightShow 8s linear infinite;*/
+}
+
+header{
+    width: 100%;
+    height: 0px; 
+    position: fixed;
+    top: 0%;
+    left: 0%;
+
+    background-color: black;
+    background-image: url("../images/head1.jpg");
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    background-position: 12% top;
+
+    animation: moveHead 500s linear infinite;
+}
+
+footer{
+    width: 100%;
+    height: 0px;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+
+    background-color: black;
+    background-image: url("../images/head1.jpg");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: 12% bottom;
+
+    animation: moveFoot 500s linear infinite;
+}
+
+div#left
+{
+    z-index: -999;
+    
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0%;
+    top: 0px;
+    
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 12% center; 
+    background-color: black;
+}
+
+.billboard
+{
+    color: yellow;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.active
+{
+    font-family: title;  
+    color: #fe019a  /*lightblue*/;
+    font-size: 50px;
+
+    transform: rotate(-25deg);
+    
+    position: absolute;
+    left: 46%;
+    top: 44.5%;
+}
+
+
+
+#num1
+{
+    position: absolute;
+    left: 6.35%;
+    top: 41.5%;  
+
+    transform: skew(-5deg);
+
+    height: 45px;
+    width: 135px;
+
+    text-align: center;
+}
+
+#num2
+{
+    position: absolute;
+    left: 6.15%;
+    top: 51%;  
+
+    transform: skew(-5deg);
+
+    height: 45px;
+    width: 135px;
+
+    text-align: center;
+}
+
+#num3
+{
+    font-size: 30px;
+
+    position: absolute;
+    left: 22.5%;
+    top: 29.5%;
+
+    transform: skew(-3deg);
+
+    width: 75px;
+
+    text-align: center;
+}
+
+#num4
+{
+    font-size: 18px;
+
+    position: absolute;
+    left: 26.7%;
+    top: 42%;
+
+    transform: skewY(25deg);
+
+    width: 75px;
+
+    text-align: center;
+}
+
+#num5
+{
+    font-size: 30px;
+
+    position: absolute;
+    left: 22.15%;
+    top: 45%;
+
+    transform: skew(-3deg);
+
+    width: 75px;
+
+    text-align: center;
+}
+
+#num6
+{
+    font-size: 28px;
+
+    position: absolute;
+    left: 8%;
+    top: 58%;
+
+    transform: skew(-3deg);
+
+    width: 85px;
+
+    text-align: center;
+}
+
+#num7
+{
+    font-size: 28px;
+
+    position: absolute;
+    left: 55.25%;
+    top: 71%;
+
+    width: 75px;
+
+    text-align: center;
+}
+
+#num8
+{
+    font-size: 30px;
+
+    position: absolute;
+    left: 56%;
+    top: 79%;
+
+    width: 75px;
+
+    text-align: center;
+}
+
+#num9
+{
+    font-size: 38px;
+
+    position: absolute;
+    left: 84.5%;
+    top: 39%;
+
+    transform: skewY(-15deg);
+
+    width: 150px;
+
+    text-align: center;
+}
+
+#num10 > p
+{
+    font-size: 48px;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    position: absolute;
+    left: 67%;
+    top: 75%;
+
+    transform: rotate(1deg);
+
+    height: 48px;
+    width: 150px;
+
+    text-align: center;
+}
+
+#num11
+{
+    font-size: 35px;
+
+    position: absolute;
+    left: 84.75%;
+    top: 54%;
+
+    transform: skewY(-6deg);
+
+    width: 150px;
+
+    text-align: center;
+}
+
+#num12
+{
+    /* position: absolute;
+     left: 44.5%;
+     top: 50%;*/
+
+    text-align: center;
+}
+
+#right
+{
+    z-index: -9999;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    height: 100%;
+    width: 100%;
+   
+   object-fit: fill;
+    
+    visibility: hidden;
+}
+
+header.void, footer.void
+{
+    height: 50%;
+
+    background-repeat: repeat-x;
+    background-position-y: 52.5%;
+}
+
+/*====================================Neon====================================*/
+
+.neon
+{
+    position: absolute;
+    border-radius: 2px;
+}
+
+@keyframes Blu1
+{
+    from {top: 40%; height: 1px;}
+    to {top: 75%; height: 80px;}
+}
+
+#blu1
+{
+    height: 1px;
+    width: 100px;
+    
+    transform: rotate(-2.5deg); 
+    transform: skewX(-2.5deg);
+    
+    left: 21.15%;
+    top: 40%;
+    
+    border-right: 3px solid lightblue;
+    
+    animation: Blu1 8s ease-in-out 5s infinite;
+}
+
+@keyframes Blu2
+{
+    from {left: 26.5%; top: 74%; height: 0px;}
+    to {left: 27%; top: 36.5%; height: 100px;}
+}
+
+#blu2
+{
+    transform: rotate(2deg);
+    /*transform: skewY(33deg);*/
+    
+    height: 0px;
+    width: 75px;
+    
+    border-right: 3px solid lightblue;
+    /*border-top: 3px solid lightblue;*/
+    
+    top: 74%;
+    left: 26.5%;
+        
+    animation: Blu2 5s ease-in-out 2s infinite;
+}
+
+@keyframes Blu3
+{
+    from {left: 27%; top: 32.5%; width: 0px;}
+    to {left: 29%; top: 35%; width: 15px;}
+}
+
+#blu3
+{
+    transform: skewY(30deg);
+    width: 0px;
+    top: 32.5%;
+    left: 27%;
+    border-top: 3px solid lightblue;
+    
+    animation: Blu3 5s linear 7s infinite alternate;
+}
+
+@keyframes Pur1
+{
+    from {top: 60.5%; height: 0px;}
+    to {top: 80.25%; height: 155px;}
+}
+
+#pur1
+{
+    top: 60.5%;
+    left: 59.5%;
+    
+    width: 100px;
+    height: 0px;
+    
+    border-right: 3px solid orchid;
+    
+    animation: Pur1 5s ease-in-out 3s infinite alternate;
+}
+
+@keyframes Pur2
+{
+    from {left: 83.75%; top: 42%; width: 150px;}
+    to {left: 82.5%; top: 41%; width: 200px;}
+}
+
+#pur2
+{  
+    transform: skewY(-22deg);
+    
+    top: 42%;
+    left: 83.75%;
+    
+    width: 150px;
+    height: 0px;
+    
+    border-top: 3px solid orchid;
+    
+    animation: Pur2 4s ease-in-out 7s infinite alternate;
+}
+
+@keyframes Pur3
+{
+    from {left: 83.75%; height: 80px;}
+    to {left: 82.5%; height: 120px;}
+}
+
+#pur3
+{
+    top: 46.5%;
+    left: 83.75%;
+    
+    width: 0px;
+    height: 80px;
+    
+    border-left: 3px solid orchid;
+    
+    animation: Pur3 4s ease-in-out 7s infinite alternate; 
+}
+
+/*====================================Neon====================================*/
+
+p#rationale, p#plagform
+{
+    border: 5px solid orchid;
+    border-radius: 100px;
+    padding: 5px 20px 5px 20px;
+    font-size: 32px;
+    position: absolute;
+    font-family: title;
+    color: orchid;
+    background-color: /*#4644BB*/ rgba(0, 0, 0, 0.7);
+}
+
+p#rationale:hover , p#plagform:hover
+{
+    border-color: #fe019a;
+    color: #fe019a;
+    cursor: pointer;
+}
+
+p#rationale
+{
+    top: 56%;
+    right: 31%;
+}
+
+p#plagform
+{
+    top: 56%;
+    right: 27%;
+}
+
+p#flag
+{
+    text-align: center;
+    border: 5px solid orchid;
+    padding: 5px;
+    font-size: 32px;
+    border-radius: 5px;
+    width: 250px;
+    position: absolute;
+    top: 64%;
+    right: 24%;
+    font-family: title;
+    color: orchid;
+    background-color: /*#4644BB*/ rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+}
