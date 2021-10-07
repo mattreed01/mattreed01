@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IMY220 - Assignment 4</title>
+        <meta charset="utf-8" />
+        <meta name="author" content="Matthew Reed">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+              integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" 
+              integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" 
+                integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" 
+                crossorigin="anonymous">
+        </script>
+
+        <style type="text/css">
+            div.col div
+            {
+                height: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="mt-3 mb-3">Profile Page</h1>
+            <div class="row">
+                <div class="col-4">
+                    <img src="no-profile-image.png" class="img-fluid" alt="Responsive image">
+                </div>
+                <div class="col">
+                    <div data-type="text" class="details">
+                        <b>Name:</b> <span>Dipper</span> <button class="btn btn-dark pull-right">Edit</button>
+                    </div>
+                    <div data-type="text" class="details">
+                        <b>Surname:</b> <span>Pines</span> <button class="btn btn-dark pull-right">Edit</button>
+                    </div>
+                    <div data-type="email" class="details">
+                        <b>Email:</b> <span>dipper@gmail.com</span> <button class="btn btn-dark pull-right">Edit</button>
+                    </div>
+                    <div data-type="date" class="details">
+                        <b>Birth date:</b> <span>13 April 2006</span> <button class="btn btn-dark pull-right">Edit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="script.js" type="text/javascript"></script>
+    </body>
+</html>
