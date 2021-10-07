@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IMY220 - Assignment 2</title>
+        <meta charset="utf-8" />
+        <meta name="author" content="Name Surname">
+        <!-- Replace Name Surname with your name and surname -->
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+              integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" 
+              integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <section id="forms" class="mt-5">
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <div class="card">
+                            <form action="login.php" method="POST">
+                                <div class="card-header">Login</div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-6">
+                                            <label for="loginEmail">Email Address:</label>
+                                            <input type="email" id="loginEmail" class="form-control" placeholder="name@email.com" name="loginEmail" />
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <label for="loginPass">Password:</label>
+                                            <input type="password" id="loginPass" class="form-control" placeholder="******" name="loginPass" />
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-12">
+                                            <button type="button" class="btn btn-dark">Login <i class="fa fa-angle-right"></i></button>
+                                            <input type="submit" value="Real Login Button" name="send"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                        <div class="card">
+                            <form action="register.php" method="POST">
+                                <div class="card-header">Register</div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-6">
+                                            <label for="regName">First Name:</label>
+                                            <input type="text" id="regName" class="form-control" placeholder="John" name="regName" />
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <label for="regSurname">Last Name:</label>
+                                            <input type="text" id="regSurname" class="form-control" placeholder="Doe" name="regSurname"/>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-lg-6">
+                                            <label for="regEmail">Email Address:</label>
+                                            <input type="email" id="regEmail" class="form-control" placeholder="john.doe@gmail.com" name="regEmail"/>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <label for="regBirthDate">Date of Birth:</label>
+                                            <input type="date" id="regBirthDate" class="form-control" name="regBirthDate"/>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-lg-6">
+                                            <label for="pass1">Create Password:</label>
+                                            <input type="password" id="pass1" name="pass1" class="form-control" placeholder="******" />
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <label for="pass2">Confirm Password:</label>
+                                            <input type="password" id="pass2" name="pass2" class="form-control" placeholder="******" />
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-12">
+                                            <button type="button" class="btn btn-dark">Register <i class="fa fa-angle-right"></i></button>
+                                            <input type="submit" value="Real Registration Button" name="sbmt"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
