@@ -1,7 +1,6 @@
 - 👋 Hi, I’m @mattreed01
 - 👀 I’m interested in Web Developement, Software Design, Star Wars and Custard
-- 🌱 I’m currently learning BIS Multimedia at the University of Pretoria
-- 💞️ I’m looking to collaborate on ...
+- 🌱 I’m currently employed as a junior react and ruby on rails developer at Codehesion
 - 📫 How to reach me matthewreed0107@gmail.com
 
 <!---
